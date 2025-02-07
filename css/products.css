@@ -474,7 +474,7 @@
         content: '';
         position: absolute;
         background-color: white;
-        width: 1000%;
+        width: 100vw;
         height: 1px;
         left: -1000px;
       }
