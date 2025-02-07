@@ -23,6 +23,18 @@
   .none{
     display: none;
   }
+  
+
+  @media(max-width:900px){
+    .pp{
+      width: 400px;
+    }
+  }
+  @media(max-width:524px){
+    .pp{
+      width: 200px;
+    }
+  }
   html,
   body {
     position: relative;
@@ -476,7 +488,7 @@
         background-color: white;
         width: 100vw;
         height: 1px;
-        left: -1000px;
+        left: 0;
       }
       .tab::before{
         top: 0;
