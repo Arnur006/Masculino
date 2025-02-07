@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <style>
+
+        body{
+            background-color: #0a0a0a;
+        }
+        body *{
+            font-family: "Montserrat", serif;
+        }
+        .container{
+            max-width: 1800px !important;
+        }
+        .serach_icon{
+            width: 15px;
+            
+        }
+        .header .navbar{
+            padding: 20px 0 20px 0;
+        }
+        .header .nav-item{
+            margin-left: 10px !important; 
+            font-size: 16px !important;
+            font-weight: normal !important;
+        }
+        .nav-link:hover .header__span{
+            color:#dc9814 !important;
+        }
+        svg,path,g{
+            transition: all 0.1s ease-in-out;
+        }
+        .header .navbar{
+            border-bottom: 1px solid white;
+        }
+        .serach_icon:hover g{
+            stroke: #dc9814;
+        }
+        .person_icon{
+            margin-left: 15px;
+        }
+        .person_icon:hover .person{
+            fill: #dc9814;
+        }
+        .navbar-brand img{
+            width: 200px;
+        }
+         .корзина{
+            text-decoration: none;
+         }
+         .корзина:hover span{
+            color: #dc9814 !important;
+         }
+         .ffd{
+            position: unset !important;
+            background-color:#0a0a0a;
+            padding-left: 55px;
+            padding-top: 25px;
+            padding-right: 10px;
+           
+         }
+         .gg{
+            font-size: small !important;
+            
+            text-align: none !important;
+         }
+         .gg a{
+          text-decoration: none;
+         }
+         .gg span{
+          color: white !important;
+         }
+         
+         .cc{
+            color: white;
+            font-size: medium !important;
+         }
+         .v:hover span{
+          color: #dc9814 !important;
+         }
+         .n{
+          padding-bottom: 25px;
+          border-bottom: 1px solid white ;
+         }
+         .f{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+         }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+              <a class="navbar-brand" href="#"><img src="https://masculinostore.kz/wp-content/uploads/2021/10/masculino_logo.svg" alt="Masculino"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link"href="#"><span class="header__span" style="color: white; transition: all 0.2s ease-in;">Зима</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="header__span" style="color: white; transition: all 0.2s ease-in;">Весна</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="header__span" style="color: white; transition: all 0.2s ease-in;">Лето</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="header__span" style="color: white; transition: all 0.2s ease-in;">Осень</span></a>
+                  </li>
+                  
+                </ul>
+                <button type="button" class="btn btn-link"data-bs-toggle="modal" data-bs-target="#exampleModal"><svg class="serach_icon" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                    
+
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    
+                    <g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke=" " stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                    
+                    </svg></button>
+                    <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Поиск по товарам" aria-label="Search">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </form>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#"><svg  class="serach_icon"fill="#ffffff" width="15px" height="15px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <g id="SVGRepo_iconCarrier">
+                        
+                        <path d="M20.5,4.609A5.811,5.811,0,0,0,16,2.5a5.75,5.75,0,0,0-4,1.455A5.75,5.75,0,0,0,8,2.5,5.811,5.811,0,0,0,3.5,4.609c-.953,1.156-1.95,3.249-1.289,6.66,1.055,5.447,8.966,9.917,9.3,10.1a1,1,0,0,0,.974,0c.336-.187,8.247-4.657,9.3-10.1C22.45,7.858,21.453,5.765,20.5,4.609Zm-.674,6.28C19.08,14.74,13.658,18.322,12,19.34c-2.336-1.41-7.142-4.95-7.821-8.451-.513-2.646.189-4.183.869-5.007A3.819,3.819,0,0,1,8,4.5a3.493,3.493,0,0,1,3.115,1.469,1.005,1.005,0,0,0,1.76.011A3.489,3.489,0,0,1,16,4.5a3.819,3.819,0,0,1,2.959,1.382C19.637,6.706,20.339,8.243,19.826,10.889Z"/>
+                        
+                        </g>
+                        
+                        </svg></a>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#profil"><svg class="person_icon" height="15px" width="15px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
+
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <g class="person" id="SVGRepo_iconCarrier"> <g> <path class="st0" d="M458.159,404.216c-18.93-33.65-49.934-71.764-100.409-93.431c-28.868,20.196-63.938,32.087-101.745,32.087 c-37.828,0-72.898-11.89-101.767-32.087c-50.474,21.667-81.479,59.782-100.398,93.431C28.731,448.848,48.417,512,91.842,512 c43.426,0,164.164,0,164.164,0s120.726,0,164.153,0C463.583,512,483.269,448.848,458.159,404.216z"/> <path class="st0" d="M256.005,300.641c74.144,0,134.231-60.108,134.231-134.242v-32.158C390.236,60.108,330.149,0,256.005,0 c-74.155,0-134.252,60.108-134.252,134.242V166.4C121.753,240.533,181.851,300.641,256.005,300.641z"/> </g> </g>
+                            
+                            </svg>
+                        </button>
+                        
+                          
+                          <!-- Modal -->
+                          <div class="modal fade" id="profil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form>
+                                    <div class="mb-3">
+                                      <label for="exampleInputEmail1" class="form-label">Имя пользователя или Email *</label>
+                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                      <div id="emailHelp" class="form-text"></div>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                      <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                                      <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="f">
+                                      <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
+                                      </div>
+                                      <a class="zabyl" href="#">Забыли свой пароль</a>
+                                    </div>
+                                    <div class="d-grid gap-2 ">
+                                      <button class="btn__btn-primary" type="button">Войти</button>
+                                      
+                                    </div>
+                                    <div class="or">
+                                      <hr>
+                                      <span>or</span>
+                                      <hr>
+                                    </div>
+                                    <div class="d-grid gap-2 register">
+                                      <button class="btn btn-light" type="button">Create Account</button>
+                                    </div>
+                                  </form>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                                                    <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-link корзина" data-bs-toggle="modal" data-bs-target="#корзина">
+                            <span class="header__span" style="color: white; transition: all 0.2s ease-in;">Корзина</span>
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade g" id="корзина" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                ...
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                           
+                  
+                  </div>
+                
+              </div>
+            </nav>
+
+            </div>
+          
+    <aside>
+        <div class="offcanvas offcanvas-start ffd show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title cc" id="offcanvasExampleLabel">Фильтровать по цене</h5>
+            </div>
+            <div class="offcanvas-body gg">
+              <div class="n">
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">All</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">0 $ - 50 $</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">50 $ - 100 $</span></a></p>
+              </div>
+            </div>
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title cc" id="offcanvasExampleLabel">Категории товаров</h5>
+            </div>
+            <div class="offcanvas-body gg">
+              <div class="n">
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Все</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Весна</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">Водолазка</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Водолазка</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Зима</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">Кардиган</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Кофты</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Кофты</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">Куртки</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Осение куртки</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Осень</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">Рубашки</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">Спорт Костюм</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">Спорт Костюм</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">Спорт Костюм</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">Толстовка</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">Трико</span></a></p>
+              </div>
+            </div>
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title cc" id="offcanvasExampleLabel">Размеры</h5>
+            </div>
+            <div class="offcanvas-body gg">
+              <div class="n">
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">3XL</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">L</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">M</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">S</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">S-3XL</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">XL</span></a></p>
+                <p class="v"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">XXL</span></a></p>
+              </div>
+            </div>
+          </div>
+    </aside>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

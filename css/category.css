@@ -1,0 +1,217 @@
+
+       
+      
+         .ffd{
+            position: unset !important;
+            background-color:#0a0a0a;
+            padding-top: 25px;
+            padding-right: 10px;
+           
+         }
+         .gg{
+            font-size: small !important;
+            
+            text-align: none !important;
+         }
+         .gg a{
+          text-decoration: none;
+         }
+         .gg span{
+          color: white !important;
+         }
+         
+         .cc{
+            color: white;
+            font-size: medium !important;
+         }
+         .v:hover span{
+          color: #dc9814 !important;
+         }
+        .span-active span{
+          color: #dc9814 !important;
+         }
+         .n{
+          padding-bottom: 25px;
+          border-bottom: 1px solid white ;
+         }
+        
+        .pppppp{
+          justify-content: end;
+          
+        }
+        .main{
+          display: flex;
+        }
+        
+        .cards{
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .cards .card{
+          width: 300px;
+          background-color: #0a0a0a !important;
+          margin-left: 50px;
+          color: white;
+          position: relative;
+        }
+        .hover-image{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 285px;
+          height: 430px;
+          opacity: 0;
+          transition: all 0.5s ease-in-out;
+        }
+        .card:hover .hover-image{
+          opacity: 1;
+        }
+        .love_icon:hover{
+          fill: white !important;
+        }
+        .title{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .lopp{  
+          font-size: medium;
+          width:200px;
+          border-color: white !important;
+          border-radius: 100px;
+          color: white !important;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .lopp:hover{
+          text-decoration: line-through;
+          background-color: inherit !important;
+        }  
+        .yty{
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: 50px;
+        } 
+        .uiu{
+          background-image: url("img/close-svgrepo-com.svg") !important;
+        
+        }
+        .breadcrumb-item a{
+            text-decoration:none;
+            color: white;
+            font-size: normal;
+        }
+        .breadcrumb .active{ 
+          color: #999;
+          font-size: normal;
+
+        }
+        .aaaa{
+          display: flex;
+        }
+        .vodolazka-glavny{
+          width: 100%;
+        }
+        .vodolazka-glavny img{
+          width: 100%;
+        }
+        .vodolazka-dopolnitel img{
+          display: block;
+        }
+        .vodolazka-dopolnitel{
+          display: flex;
+          flex-wrap: wrap ;
+          border: 1px solid white;
+          
+        }
+        .vodolazka-dopolnitel img{
+          width: 177px;
+          height: 177px;
+          object-fit: cover;
+          padding: 5px;
+        }
+        .vodolazka{
+          width: 50%;
+        }
+        .a{
+          display: flex;
+        }
+        .tab{
+          width: 50%;
+        }
+        .tab-content{
+          width: max-content;
+          margin: 0 auto;
+        }
+        .list-group li{
+          background-color:#0a0a0a!important;
+        }
+        .list-group-item{
+          color: white;
+        }
+        .item{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .svet{
+          border-radius: 100%;
+          height: 25px;
+          width: 25px;
+          display: inline-block;
+          margin-left: 5px;
+          
+        }
+        .svet:hover{
+           border: 2px solid #535252  ;
+        }
+        .-red{
+          background-color: #8e1c1c;
+
+        }
+        .-green{
+          background-color: #005f6a;
+
+        }
+        .-black{
+          background-color: #808080;
+
+        }
+        .-orange{ 
+          background-color: #964b00;
+
+        }
+        .list-group{
+          width: 700px;
+        }
+        .dropdown-menu{
+         width: 100%;
+         
+        }
+        .vb{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          
+        }
+        .ttt{
+          text-align: right !important;
+          color:#494848;
+        }
+        .ttt:hover{
+          background-color:#292929 !important;
+          color: #808080;
+        }
+        .pppp{
+          color: #dc9814;
+        }
+        .oooo{
+          text-decoration: none ;
+          color: white;
+        }
+        .oooo:hover{
+          color:white;
+        }

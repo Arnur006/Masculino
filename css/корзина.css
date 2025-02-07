@@ -1,0 +1,61 @@
+.корзина{
+    text-decoration: none;
+    
+ }
+ .корзина:hover span{
+    color: #dc9814 !important;
+ }
+ .корзинааа{
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: #a5a5a5 !important;
+    width: 23%;
+  }
+  @media(max-width:1440px){
+  .корзинааа{
+    width: 27vw;
+  }
+  }
+  @media(max-width:1080px){
+  .корзинааа{
+    width: 35%;
+  }
+}
+  @media(max-width:992px){
+    .корзинааа{
+        width: 40%;
+      }
+
+
+}
+@media(max-width:820px){
+    .корзинааа{
+        width: 50%;
+      }
+  
+
+  }
+  @media(max-width:750px){
+    .корзинааа{
+        width: 55%;
+      }
+    }
+    @media(max-width:550px){
+        .корзинааа{
+            width: 75%;
+          }
+        }
+        @media(max-width:320px){ 
+            .корзинааа{
+            width: 95%;
+          }
+    
+        }
+        .корзина-body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+            background-color: #0a0a0a !important;
+          }

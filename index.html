@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="корзина.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/products.css">
+    <style>
+
+        body{
+            background-color: #0a0a0a;
+        }
+        .card-link{
+          display: block;
+          width: max-content;
+          border: 1px solid red;
+        }
+        
+        body *{
+            font-family: "Montserrat", serif;
+        }
+        .custom-container{
+          width: 98%;
+          margin: 0 auto;
+        }
+        .container{
+            max-width: 1800px !important;
+        }
+        .serach_icon{
+            width: 15px;
+            
+        }
+        .header .navbar{
+            padding: 20px 0 20px 0;
+        }
+        .header .nav-item{
+            margin-left: 10px !important; 
+            font-size: 16px !important;
+            font-weight: normal !important;
+        }
+        .nav-link:hover .header__span{
+            color:#dc9814 !important;
+        }
+        svg,path,g{
+            transition: all 0.1s ease-in-out;
+        }
+        .header .navbar{
+            border-bottom: 1px solid white;
+        }
+        .serach_icon:hover g{
+            stroke: #dc9814;
+        }
+        .person_icon{
+            margin-left: 15px;
+        }
+        .person_icon:hover .person{
+            fill: #dc9814;
+        }
+        .navbar-brand img{
+            width: 200px;
+        }
+         .корзина{
+            text-decoration: none;
+            
+         }
+         .корзина:hover span{
+            color: #dc9814 !important;
+         }
+         .custom-card{
+          width: max-content !important;
+        
+         }
+         .card-title{
+          font-weight: 500;
+          font-size: smaller;
+         }
+         .card-body{
+          padding: 0 !important;
+         }
+         @media(max-width:3100px){
+          .custom-card{
+            width: 16.9900vw !important;
+            height: max-content;
+          }
+          .custom-card-image, .hover-image{
+            width: 16.9900vw !important;
+            height: 25.4848vw !important;
+          }
+      
+         }
+         @media(max-width:3100px){
+          .custom-card{
+            width: 16.9900vw;
+            height: max-content;
+          }
+          .custom-card-image, .hover-image{
+            width: 16.6487vw !important;
+            height: 24.9731vw;
+          }
+          
+        }
+         @media(max-width:2560px){
+          .custom-card{
+            width: 16.8164vw !important;
+            height: max-content;
+          }
+          .custom-card-image, .hover-image{
+            width: 16.8164vw !important;
+            height: 25.2246vw !important;
+          }
+          
+         }
+         @media(max-width:1440px){
+          .custom-card{
+            width: 16.0417vw !important;
+            height: max-content;
+          }
+          .custom-card-image, .hover-image{
+            width: 16.0417vw !important;
+            height: 24.0625vw !important;
+          }
+          
+         }
+
+         @media(max-width:1024px){
+          .cards .card{
+            margin-left: 1vw;
+          }
+          .custom-card{
+            width: 15.7109vw !important;
+            height: max-content;
+          }
+          .custom-card-image, .hover-image{
+            width: 15.7109vw !important;
+            height: 23.5654vw !important;
+          }
+          .card-title{
+            font-size: 10px;
+           
+          }
+         }
+         @media(max-width:992px){
+          .cards .card{
+            margin-left: 2vw !important;
+          }
+          .custom-card{
+            width: 29.9677vw !important;
+            height: max-content;
+          }
+          .custom-card-image, .hover-image{
+            width: 29.9677vw !important;
+            height: 44.9516vw !important;
+          }
+          .card-title{
+            font-size: 15px;
+           
+          }
+          
+          .arn{
+            display: block !important;
+            width: 100%;
+            margin: 0;
+            
+            
+          }
+          .ffd{
+            display: none;
+          }
+          .main{
+            display: flex;
+            flex-direction: column;
+          }
+         
+         }
+         @media(max-width:768px){
+          .cards .card{
+            margin-left: 2vw !important;
+          }
+          .custom-card{
+            width: 30.2552vw !important;
+            height: max-content;
+          }
+          .custom-card-image, .hover-image{
+            width: 30.2552vw !important;
+            height: 45.4401vw !important;
+          }
+          .card-title{
+            font-size: 15px;
+           
+          }
+        }
+        @media(max-width:425px){
+          .cards .card{
+            margin-left: 2vw !important;
+          }
+          .custom-card{
+            width: 44.5882vw !important;
+            height: max-content;
+            margin-top: 25px;
+          }
+          .custom-card-image, .hover-image{
+            width: 44.5882vw !important;
+            height: 66.8824vw !important;
+          }
+          .card-title{
+            font-size: 10px;
+           
+          }
+        }
+         
+         
+        .arn{
+          display: none;
+        }
+       
+         .f{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+         }
+        .корзинааа{
+          background-color: #a5a5a5 !important;
+        }
+        .pppppp{
+          justify-content: end;
+          
+        }
+
+        
+        
+      
+       
+      
+       
+        
+        
+      
+        
+       
+       
+        
+        .ooop::placeholder{
+          color: #999;
+          
+        }
+        .ooop{
+          border:none;
+          border-bottom: 1px solid white;
+          border-radius: 0;
+        }
+        .gc{
+          background-image: url("./img/close-svgrepo.svg");
+          padding: 10px;
+        }
+        .serach{
+          width: 22px;
+          margin-left: 50px;
+          padding-right: 5px;
+
+        }
+        .custom-show{
+          visibility:visible !important;
+          transform: none !important;
+        }
+        .x a{
+          color: white;
+          text-decoration: none;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+  <div class="header">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          s
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link"href="./index.html?category=Зима"><span class="header__span" style="color: white; transition: all 0.2s ease-in;">Зима</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html?category=Весна"><span class="header__span" style="color: white; transition: all 0.2s ease-in;">Весна</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html?category=Лето"><span class="header__span" style="color: white; transition: all 0.2s ease-in;">Лето</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html?category=Осень"><span class="header__span" style="color: white; transition: all 0.2s ease-in;">Осень</span></a>
+              </li>
+              
+            </ul>
+            <button type="button" class="btn btn-link"data-bs-toggle="modal" data-bs-target="#exampleModal"><svg class="serach_icon" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                
+
+              <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+              
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+              
+              <g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke=" " stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+              
+              </svg></button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" style="max-width: 100%; width: 100%; margin-top: 0; margin-bottom: 0;">
+                    <div class="modal-content">
+                        <div class="modal-body" style="background-color: #0a0a0a; padding: 10px;">
+                            <form class="d-flex" role="search">
+                              <img class="serach" src="./img/search-svgrepo.svg" alt="">
+                                <input class="form-control me-2 ooop" style="background-color: #0a0a0a; color:#999;" type="search" placeholder="Search products" aria-label="Search">
+                                <button type="button" class="btn-close gc" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+              <a href="#"><svg  class="serach_icon"fill="#ffffff" width="15px" height="15px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                  
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                  
+                  <g id="SVGRepo_iconCarrier">
+                  
+                  <path d="M20.5,4.609A5.811,5.811,0,0,0,16,2.5a5.75,5.75,0,0,0-4,1.455A5.75,5.75,0,0,0,8,2.5,5.811,5.811,0,0,0,3.5,4.609c-.953,1.156-1.95,3.249-1.289,6.66,1.055,5.447,8.966,9.917,9.3,10.1a1,1,0,0,0,.974,0c.336-.187,8.247-4.657,9.3-10.1C22.45,7.858,21.453,5.765,20.5,4.609Zm-.674,6.28C19.08,14.74,13.658,18.322,12,19.34c-2.336-1.41-7.142-4.95-7.821-8.451-.513-2.646.189-4.183.869-5.007A3.819,3.819,0,0,1,8,4.5a3.493,3.493,0,0,1,3.115,1.469,1.005,1.005,0,0,0,1.76.011A3.489,3.489,0,0,1,16,4.5a3.819,3.819,0,0,1,2.959,1.382C19.637,6.706,20.339,8.243,19.826,10.889Z"/>
+                  
+                  </g>
+                  
+                  </svg></a>
+                  <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#profil"><svg class="person_icon" height="15px" width="15px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
+
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                      
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                      
+                      <g class="person" id="SVGRepo_iconCarrier"> <g> <path class="st0" d="M458.159,404.216c-18.93-33.65-49.934-71.764-100.409-93.431c-28.868,20.196-63.938,32.087-101.745,32.087 c-37.828,0-72.898-11.89-101.767-32.087c-50.474,21.667-81.479,59.782-100.398,93.431C28.731,448.848,48.417,512,91.842,512 c43.426,0,164.164,0,164.164,0s120.726,0,164.153,0C463.583,512,483.269,448.848,458.159,404.216z"/> <path class="st0" d="M256.005,300.641c74.144,0,134.231-60.108,134.231-134.242v-32.158C390.236,60.108,330.149,0,256.005,0 c-74.155,0-134.252,60.108-134.252,134.242V166.4C121.753,240.533,181.851,300.641,256.005,300.641z"/> </g> </g>
+                      
+                      </svg>
+                  </button>
+                    
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="profil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="mb-3">
+                                  <label for="exampleInputEmail1" class="form-label">Имя пользователя или Email *</label>
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <div id="emailHelp" class="form-text"></div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                  <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                                  <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="f">
+                                  <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
+                                  </div>
+                                  <a class="zabyl" href="#">Забыли свой пароль</a>
+                                </div>
+                                <div class="d-grid gap-2 ">
+                                  <button class="btn__btn-primary" type="button">Войти</button>
+                                  
+                                </div>
+                                <div class="or">
+                                  <hr>
+                                  <span>or</span>
+                                  <hr>
+                                </div>
+                                <div class="d-grid gap-2 register">
+                                  <button class="btn btn-light" type="button">Create Account</button>
+                                </div>
+                              </form>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-link корзина" data-bs-toggle="modal" data-bs-target="#корзинаа">
+                                                  <span class="header__span" style="color: white; transition: all 0.2s ease-in;">Корзина</span><sup class="kor-chet" style="color:#dc9814" >0</sup>
+                                              </button>
+                                              
+                                              
+                                              
+                                              <div class="modal fade g" id="корзинаа" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                  <div  class="modal-dialog modal-fullscreen корзинааа">
+                                                  <div class="modal-content окно_корзины" style="background-color: #0a0a0a !important;">
+                                                      <div class="modal-header pppppp">
+                                                      <button type="button" class="btn btn-link" data-bs-dismiss="modal" aria-label="Close" style="text-decoration: none; color:white">Закрыть</button>
+                                                      </div>
+                                                      <div class="корзина-body">
+                                                        <div class="empty">
+                                                          <div style="display:flex; justify-content:center; flex-direction:column; align-items:center; padding-top:30px">
+                                                            <img src="close-circle-svgrepo-com.svg" alt="">
+                                                            <p style="color:aliceblue; padding-top:10px;">Корзина пуста</p>
+                                                          </div>
+                                                          
+                                                          <div style="width: 100%; display:flex; justify-content:center; padding-bottom:100px">
+                                                            <button type="button" class="btn" data-bs-dismiss="modal" style="color:#a5a5a5; border-color: #a5a5a5; width:70%">Продолжить покупку</button>
+                                                            
+                                                          </div>  
+                                                        </div>
+                                                        <div class="kor-elem-naz ">
+                                                          
+                           
+                                                        </div>
+                                                        <div class="korzina-check_wrap">
+                                                         <div class="korzina-check">
+                                                           <p>Промежуточный итог:</p>
+                                                           <p><span class="zena">13.5</span> $</p>
+                                                         </div>
+                                                         <div style="width: 100%; display:flex; justify-content:center; padding-bottom:20px">
+                                                           <a href="./Посмотреть карточку.html"  class="btn"  style="color:white; border-color: #a5a5a5; width:70%; margin-top:20px;">Просмотреть корзину</a>
+                                                         </div>
+                                                           <div style="width: 100%; display:flex; justify-content:center; padding-bottom:20px">
+                                                           <button type="button" class="btn" data-bs-dismiss="modal" style="color:white; background-color: #a57411; width:70%">Проверить</button>
+                                                         </div>
+                                                        </div>
+                                                        </div>
+                                                        
+                                                      </div>
+                                                       
+                                                        
+                                                      </div>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   
+                                                  </div>
+                       
+              
+              </div>
+            
+          </div>
+        </nav>
+
+        </div>
+          
+    <div class="content">
+      <link rel="stylesheet" href="css/mainPage.css">
+      <main class="custom-container main">
+        <aside>
+          <div class="accordion accordion-flush arn" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button  style="background-color: #0a0a0a; color: white;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Фильтровать по цене
+                </button>
+              </h2>
+              <div style="background-color: #0a0a0a; color:white;" id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><div class="x">
+                  <p class="v span-active" id="price"><a href="./index.html?category=All"><span class="gg__span" style="transition: all 0.2s ease-in;">All</span></a></p>
+                  <p class="v" id="price"><a href="./index.html?category=0 $ - 50 $"><span class="gg__span" style="transition: all 0.2s ease-in;">0 $ - 50 $</span></a></p>
+                  <p class="v" id="price"><a href="./index.html?category=50 $ - 100 $"><span class="gg__span" style=" transition: all 0.2s ease-in;">50 $ - 100 $</span></a></p>
+                </div></div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button style="background-color: #0a0a0a; color:white; " class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                 Категории
+                </button>
+              </h2>
+              <div style="background-color: #0a0a0a; color:white;" id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><div class="x">
+                  <p class="v " id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Все</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Весна</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Водолазка</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Зима</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Кардиган</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Кофты</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Куртки</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Осение куртки</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Осень</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Рубашки</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Спорт Костюм</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Толстовка</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Трико</span></a></p>
+                </div></div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button style="background-color: #0a0a0a; color:white;" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Размеры
+                </button>
+              </h2>
+              <div style="background-color: #0a0a0a; color:white;" id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><div class="x">
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">3XL</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">L</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">M</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">S</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">S-3XL</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">XL</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">XXL</span></a></p>
+                </div></div>
+              </div>
+            </div>
+          </div>
+          <div class="offcanvas offcanvas-start ffd show custom-show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title cc" id="offcanvasExampleLabel">Фильтровать по цене</h5>
+              </div>
+              <div class="offcanvas-body gg">
+                <div class="n">
+                  <p class="v span-active" id="price"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">All</span></a></p>
+                  <p class="v" id="price"><a href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">0 $ - 50 $</span></a></p>
+                  <p class="v" id="price"><a href="#"><span class="gg__span" style=" transition: all 0.2s ease-in;">50 $ - 100 $</span></a></p>
+                </div>
+              </div>
+              
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title cc" id="offcanvasExampleLabel">Категории товаров</h5>
+              </div>
+              <div class="offcanvas-body gg">
+                <div class="n">
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Все</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Весна</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Водолазка</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Зима</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Кардиган</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Кофты</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Куртки</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Осение куртки</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Осень</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Рубашки</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Спорт Костюм</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Толстовка</span></a></p>
+                  <p class="v" id="category"><a role="button" href="#"><span class="gg__span" style="transition: all 0.2s ease-in;">Трико</span></a></p>
+                </div>
+              </div>
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title cc" id="offcanvasExampleLabel">Размеры</h5>
+              </div>
+              <div class="offcanvas-body gg">
+                <div class="n">
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">3XL</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">L</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">M</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">S</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">S-3XL</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">XL</span></a></p>
+                  <p class="v" id="size"><img class="closee" src="./img/close.svg" alt=""><a href="#" onclick="return false"><span class="gg__span" style="transition: all 0.2s ease-in;">XXL</span></a></p>
+                </div>
+              </div>  
+            </div>
+      </aside>
+      <section><div class="yty">
+      <div class="btn btn-outline-secondary lopp" disabled><button type="button" class="btn-close uiu" aria-label="Close"></button><span>Filters active <span class="chetchik" style="color: #282828;"></span></span></div>
+      </div>
+        <div class="cards" style="background-color: #0a0a0a;">
+         
+  
+        </div>
+ 
+      </section>
+      </main>
+    </div>
+    
+    <footer>
+      <div class="custom-container"> 
+        <p style="color: #999; padding:10px; margin-top:50px; font-size:14px;">© 2021. Kelzin Group. Все права защищены.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+   
+      const pageUrl = new URL(window.location.href)
+      console.log(pageUrl)
+      const content = document.querySelector(".content")
+      let url = 'main'
+      const cardsContent = {
+                0:{
+                  name:"Водолазка(normal)",
+                  img_first : 'католог/Водолазка(normal)/1.jpg',
+                  img_second: 'католог/Водолазка(normal)/2.jpg',
+                  price: '13,50$',
+                  categories:['Водолазка', 'Зима', "Осень", "Все"],
+                  rangeOfPrices: ["0 $ - 50 $","All"],
+                  size:["3XL","L","M","S","S-3XL","XL"],
+                  url: "Водолазка(normal)",
+                  href: "./Водолазка(normal).html"
+                },
+                1:{
+                  name:"Куртка(normal)",
+                  img_first : 'католог/Куртка(normal)/1.jpg',
+                  img_second: 'католог/Куртка(normal)/2.jpg',
+                  price: '49,00$',
+                  categories:['Зима', "Куртки", "Все"],
+                  rangeOfPrices: ["0 $ - 50 $","All"],
+                  size:[""],
+                  url: "Куртка (normal)",
+                  href: "./Куртка(normal).html"
+
+                },
+                2:{ 
+                  name:"Куртка(normal)",
+                  img_first : 'католог/Куртка(normal)(2)/1.jpg',
+                  img_second: 'католог/Куртка(normal)(2)/2.jpg',
+                  price: '49,50$',
+                  categories:['Зима', "Куртки", "Все"],
+                  rangeOfPrices: ["0 $ - 50 $","All"],
+                  size:[""],
+                  url: "Куртка (normal)(2)",
+                  href: "./Куртка(normal)(2).html"
+                },
+                3:{
+                  name:"Куртка(oversize)",
+                  img_first : 'католог/Куртка(oversize)/1.jpg',
+                  img_second: 'католог/Куртка(oversize)/2.jpg',
+                  price: '32,00$',
+                  categories:['Зима', "Куртки", "Все"],
+                  rangeOfPrices: ["0 $ - 50 $","All"],
+                  size:["L","M","XL","XXL"],
+                  url: "Куртка (oversize)",
+                  href: "./Куртка(oversize).html"
+                },
+                4:{
+                  name:"Мужская двойка(normal)",
+                  img_first : 'католог/Мужская двойка(normal)/1.jpg',
+                  img_second: 'католог/Мужская двойка(normal)/2.jpg',
+                  price: '29,00$',
+                  categories:['Зима', "Осень" , "Спорт Костюм", "Толстовка", "Трико", "Все", "Весна"],
+                  rangeOfPrices: ["0 $ - 50 $","All"],
+                  size:["L","M","S","XL","XXL"],
+                  url: "Мужская двойка(normal)",
+                  href: "./Мужская двойка(normal).html"
+                },
+                5:{
+                  name:"Мужская кофта(normal)",
+                  img_first : 'католог/Мужская кофта(normal)/1.jpg',
+                  img_second: 'католог/Мужская кофта(normal)/2.jpg',
+                  price: '10,50$',
+                  categories:['Зима', "Кофты" , "Осень", "Все"],
+                  rangeOfPrices: ["0 $ - 50 $","All"],
+                  size:["L","M","XL","XXL"],
+                  url: "Мужская кофта(normal)",
+                  href: "./Мужская кофта(normal).html"
+                },
+                6:{
+                  name:"Мужская кофта(normal)",
+                  img_first : 'католог/Мужская кофта(normal)(2)/1.jpg',
+                  img_second: 'католог/Мужская кофта(normal)(2)/2.jpg',
+                  price: '12,00$',
+                  categories:['Зима', "Кофты", "Осень", "Все"],
+                  rangeOfPrices: ["0 $ - 50 $","All"],
+                  size:["3XL","L","M","XL","XXL"],
+                  url: "Мужская кофта(normal)(2)",
+                  href: "./Мужская кофта(normal)(2).html"
+                },
+                7:{
+                  name:"Мужская рубашка(normal)",
+                  img_first : 'католог/Мужская рубашка(normal)/1.jpg',
+                  img_second: 'католог/Мужская рубашка(normal)/2.jpg',
+                  price: '11,00$',
+                  categories:["Рубашки", "Все"],
+                  rangeOfPrices: ["0 $ - 50 $","All"],
+                  size:["3XL","L","M","XL","XXL"],
+                  url: "Мужская рубашка(normal)",
+                  href: "./Мужская рубашка(normal).html"
+                },
+                8:{
+                  name:"Мужской бомбер(oversize)",
+                  img_first : 'католог/Мужской бомбер(oversize)/1.jpg',
+                  img_second: 'католог/Мужской бомбер(oversize)/2.jpg',
+                  price: '29,00$',
+                  categories:["Осение куртки", "Осень", "Все"],
+                  rangeOfPrices: ["0 $ - 50 $","All"],
+                  size:["L","M","S","XL"],
+                  url: "Мужской бомбер(oversize)",
+                  href: "./Мужской бомбер(oversize).html"
+                },
+                9:{
+                  name:"Мужской кардиган(normal)",
+                  img_first : 'католог/Мужской кардиган(normal)/1.jpg',
+                  img_second: 'католог/Мужской кардиган(normal)/2.jpg',
+                  price: '15,50$',
+                  categories:["Кардиган", "Все"],
+                  rangeOfPrices: ["0 $ - 50 $","All"],
+                  size:["L","M","XL","XXL"],
+                  url: "Мужской кардиган (normal)",
+                  href: "./Мужской кардиган (normal).html"
+                }
+
+
+                } 
+      let filters = ["Все", "All", []]
+      const cardsWrap = document.querySelector('.cards')
+      let cards = ``
+      const cardsGenerate = (category, rangeOfPrice)=>{
+        if (pageUrl.searchParams.get("category")){
+          filters[0] = pageUrl.searchParams.get("category")
+        }
+        console.log(category)
+        console.log(rangeOfPrice)
+        cards = ``
+        for(const card in cardsContent){
+          if(cardsContent[card].categories.includes(filters[0]) && cardsContent[card].rangeOfPrices.includes(filters[1])){
+            cards+= `<a class='custom-card-link' style="text-decoration:none; color:white;" href="${cardsContent[card].href}">
+               <div data-url="${cardsContent[card].url}" class="card custom-card">
+              <img src="${cardsContent[card].img_first}" class="card-img-top custom-card-image" alt="...">
+              <img class="hover-image card-img-top" src="${cardsContent[card].img_second}" alt="">
+              <div class="card-body">
+                <div class="title custom-card-title">
+                  <h5 class="card-title">${cardsContent[card].name}</h5>
+                  <a href="#">
+                    <svg class="love_icon" fill="none" width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="white">
+      
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                      
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" stroke-width="2.112">
+                      
+                      <path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"/>
+                      
+                      </g>
+                      
+                      <g id="SVGRepo_iconCarrier">
+                      
+                      <path d="M20.808,11.079C19.829,16.132,12,20.5,12,20.5s-7.829-4.368-8.808-9.421C2.227,6.1,5.066,3.5,8,3.5a4.444,4.444,0,0,1,4,2,4.444,4.444,0,0,1,4-2C18.934,3.5,21.773,6.1,20.808,11.079Z"/>
+                      
+                      </g>
+                      
+                      </svg>
+                  </a>  
+                </div>
+                <p class="card-text custom-card-text">${cardsContent[card].price}</p>
+    
+              </div>
+            </div>
+            </a>`
+          }
+       }  
+       cardsWrap.innerHTML = cards
+      }
+      cardsGenerate()
+
+      const categories = document.querySelectorAll('#category')
+      const Filters = document.querySelector('.lopp')
+      const chetchikText = document.querySelector(".chetchik")
+      let chetchik = 0
+  
+
+      
+      categories.forEach(category=>{
+        if(category.textContent === filters[0]){
+          category.classList.add('span-active')
+        }
+        category.addEventListener('click', (target)=>{
+            categories.forEach(l=> l.classList.remove("span-active"))
+            let categoryText = category.textContent
+            category.classList.add('span-active')
+            filters[0]= categoryText
+            pageUrl.searchParams.set("category",categoryText  )
+            cardsGenerate()
+            cartochkyChange()
+        })
+      })
+     
+
+      const prices = document.querySelectorAll('#price')
+  
+
+      prices.forEach(price=>{
+        price.addEventListener('click', (target)=>{
+            prices.forEach(l=> l.classList.remove("span-active"))
+            let priceText = price.textContent
+            price.classList.add('span-active')
+            filters[1]=priceText
+            cardsGenerate()
+        })
+      })
+
+      const sizes = document.querySelectorAll('#size')
+      
+      const chetchikCheck = ()=>{
+        if(chetchik>0){Filters.classList.add("lopp-active")}
+        else{Filters.classList.remove("lopp-active")}
+      }
+
+      sizes.forEach(size=>{
+        size.addEventListener('click', (target)=>{
+            let sizeText = size.textContent
+            size.classList.toggle('size-active')
+            let gyt = document.querySelectorAll(".size-active")
+            chetchik= gyt.length
+            chetchikCheck()
+            chetchikText.textContent= `(${chetchik})`
+            
+        })
+      })
+         
+      Filters.addEventListener('click', ()=>{
+        chetchik = 0 
+        sizes.forEach(rtyt=>rtyt.classList.remove("size-active"))
+        chetchikCheck()
+      })
+      
+      
+      cartochkyChange()
+
+    
+     
+    </script>
+    <script type="module" src="./js/cart.js"></script>
+</body>
+</html>
+
