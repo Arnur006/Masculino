@@ -38,6 +38,7 @@
         height: 40px;
         color: white;
         border: none;
+        margin-top: 20px;
     }
     .enter-name{
       color: rgb(255, 51, 0);
@@ -53,6 +54,36 @@
     }
     .enter-name-none{
       display: none;
+    }
+    .nnnbbb{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+    .nnnmmm{
+        width: 30%;
+        height: 1px;
+        opacity: 1;
+     
+    }
+    .sdsdd{
+        margin-top: 20px;
+    }
+    .xs{
+        background-color: transparent;
+        border: 2px solid rgb(197, 197, 197);
+        color: white;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    
+    }
+    .xs:hover{
+        background-color: white;
+        color: black;
     }
     </style>
     <meta charset="UTF-8">
@@ -132,7 +163,7 @@
                         </g>
                         
                         </svg></a>
-                        <a href="./окончательно забыл пароль.html" type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#profil"><svg class="person_icon" height="15px" width="15px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#profil"><svg class="person_icon" height="15px" width="15px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
     
                             <g id="SVGRepo_bgCarrier" stroke-width="0"/>
                             
@@ -141,11 +172,11 @@
                             <g class="person" id="SVGRepo_iconCarrier"> <g> <path class="st0" d="M458.159,404.216c-18.93-33.65-49.934-71.764-100.409-93.431c-28.868,20.196-63.938,32.087-101.745,32.087 c-37.828,0-72.898-11.89-101.767-32.087c-50.474,21.667-81.479,59.782-100.398,93.431C28.731,448.848,48.417,512,91.842,512 c43.426,0,164.164,0,164.164,0s120.726,0,164.153,0C463.583,512,483.269,448.848,458.159,404.216z"/> <path class="st0" d="M256.005,300.641c74.144,0,134.231-60.108,134.231-134.242v-32.158C390.236,60.108,330.149,0,256.005,0 c-74.155,0-134.252,60.108-134.252,134.242V166.4C121.753,240.533,181.851,300.641,256.005,300.641z"/> </g> </g>
                             
                             </svg>
-                          </a>
+                        </button>
                         
                           
                           <!-- Modal -->
-                      
+                          
                                                     <!-- Button trigger modal -->
                         <button type="button" class="btn btn-link корзина" data-bs-toggle="modal" data-bs-target="#корзинаа">
                             <a href="./Посмотреть карточку.html"> <span class="header__span" style="text-decoration: none ;color: white; transition: all 0.2s ease-in;">Корзина</span><sup class="kor-chet" style="color:#dc9814" >0</sup></a>
@@ -208,11 +239,27 @@
               </div>
 <div class="lost">
   <div class="enter-name enter-name-none"></div>
-<p class="lost-your">Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.</p>
-<p class="username">Username or email</p>
+<p class="lost-your">Log in</p>
+<p class="username">Username or email address</p>
 <input class="blr" type="text"><br>
-<button type="button" class="res-pas">Reset password</button>
+<p class="username">Password</p>
+<input class="blr" type="text"><br>
+
+<div class="nnnbbb">
+    <div >
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1" style="color:white;">Запомнить меня</label></div>
+    <a href="./Забыли пароль.html" style="color:white; text-decoration:none;">Забыли свой пароль</a>
 </div>
+<button type="button" class="res-pas" >Log in</button>
+<div class="nnnbbb sdsdd">
+    <hr class="nnnmmm">
+    <p style="padding-top: 10px;">or</p>
+    <hr class="nnnmmm">
+</div>
+<a type="button" class="res-pas xs" >Create an account</a>
+</div>
+
 <footer>
   <div class="custom-container"> 
     <p style="color: #999; padding:10px; margin-top:50px; font-size:14px;">© 2021. Kelzin Group. Все права защищены.</p>
@@ -224,7 +271,7 @@
   const entername = document.querySelector(".enter-name")
   respas.addEventListener("click" , ()=>{
     if (blr.value ===''){
-      entername.textContent = 'Enter a username or email address.'
+      entername.textContent = 'Error: Username is required.'
     }
     else{
       entername.textContent = 'Invalid username or email.'
