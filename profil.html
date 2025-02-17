@@ -4,59 +4,59 @@
 <head>
   <link rel="stylesheet" href="css/bodyFix.css">
     <style>
-      body{
-        display: flex;
-        flex-direction: column;
-      }
-     .pop{
-        border-radius: 100%;
-        color: black;
-        background-color: white;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: x-large;
+        html,body{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+         
+        }
+        .user-image{
+            border-radius: 100%;
+            width: 60px;
+            height: 60px;
+        }
+        .Helo{
+            color: white;
+            font-size: small;
+            margin-top:10px ;
+            margin-bottom: 50px;
+        }
+        .p{
+            color: white;
+            font-size: medium;
+            cursor: pointer;
+        }
+        .p.active{
+            text-decoration: underline;
+        }
+        .as{
+            margin-left: 60px;
+            margin-top: 50px;
+        }
+        .Logout{
+            color: white;
+            font-size: medium;
+        }
 
-       
+        .flex{
+            display: flex;
+            flex: 1 1 auto;
+        }
+        .From{
+            font-size: small;
+            color: white;
+            text-align: center;
+        }
+        .blue{
+            color: #a57411;
+            text-decoration: none;
+        }
+        .flexx{
+           padding-top: 50px;
+            width: 100vw;
+        }
         
-     }
-     .lost{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin-top: 50px;
-        flex-direction: column;
-        align-items: center;
-     }
-     .lol{
-        font-size: large;
-        font-weight: 600;
-        color: white;
-     }
-     .kek{
-        font-size: small;
-        color: white;
-
-     }
-     .Home{
-        display: flex;
-        flex-direction: column;
-       
-        border: none;
-        background-color: #dc9814;
-        color: white;
-        font-size: small;
-        text-decoration: none;
-        width: 55px;
-        text-align: center;
-        padding: 5.5px 0;
-        
-     }
-     .gome {
-      margin-left: 240px;
-     }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -209,15 +209,36 @@
                   </div>
                 
               </div>
-<form class="lost">
-
-    <p class="pop">X</p><br>
-
-    <div>
-        <p class="lol">Page not found.</p>
-        <p class="kek">It looks like nothing was found at this location. Click the link below to return home.</p>
-        <div class="gome"><a href="./index.html" class="Home">Home</a></div>
-    </div>
-</form>
+              <body>
+                <div class="flex">
+                    <aside class="as">
+                        <div>
+                        <img class="user-image" src="./img/user.jpg" alt="">
+                    </div>
+                    <div>
+                      <p class="Helo">Hello, sadads</p>
+                    </div>
+                    <div>
+                        <p class="p" id="Dashboard">Dashboard</p>
+                        <p class="p" id="Orders" >Orders</p>
+                        <p class="p" id="Downloads" >Downloads</p>
+                        <p class="p" id="Adress" >Adress</p>
+                        <p class="p" id="AccountDetails" >Account details</p>
+                        <p class="p" id="Logout">Logout</p>
+                    </div>
+                    </aside>
+                    <div class="content">
+                        
+                    </div>
+                </div>
+                <footer>
+                    <div class="custom-container"> 
+                      <p style="color: #999; padding:10px; margin-top:50px; font-size:14px;">© 2021. Kelzin Group. Все права защищены.</p>
+                    </div>
+                  </footer>
+              </body>
+<script>
+</script>
+<script src="./js/profil.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 </body>
