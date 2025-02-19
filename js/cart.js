@@ -1,4 +1,5 @@
 
+
 const cart = ()=>{
   console.log(localStorage)
   const korElemNaz = document.querySelector(".kor-elem-naz");

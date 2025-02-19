@@ -8,5 +8,5 @@ lost.addEventListener('submit', (e) => {
         userPassword : password.value,
     }
     localStorage.setItem("user", JSON.stringify(user))
-    window.location.href="./index.html"
+    window.location.href="./profil.html"
 })
