@@ -31,6 +31,9 @@
         .p.active{
             text-decoration: underline;
         }
+        .header_span{
+          text-decoration: none;
+        }
         .as{
             margin-left: 60px;
             margin-top: 50px;
@@ -62,7 +65,67 @@
             width: 100vw;
         }
        
-        
+        @media(max-width:1591px){
+          .From{
+            width:68.8875vw;
+            text-align: left;
+          }
+        }
+        @media(max-width:1250px){
+          .ppoo{
+            width: 33.6800vw;
+            gap: 30px;
+          }
+          .ppoopp{
+            width: 70.1600vw;
+          }
+          .iop-2{
+            width: 33.6800vw;
+          }
+        }
+        @media(max-width:991px){
+          .flex{
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
+          }
+          .as{
+            width: 100%;
+            margin-left: 0;
+            margin-top: 0;
+          }
+          .vvxx{
+            text-align: center;
+          }
+          .user-image{
+            display: none;
+          }
+          .Helo{
+            text-align: center;
+            font-size: 30px;
+            margin-top: 10px;
+          }
+          .ppoo{
+            width: 33.6800vw;
+          }
+          .ppoopp{
+            width: 70.1600vw;
+          }
+          .iop-2{
+            width: 33.6800vw;
+          }
+        }
+        @media(max-width:860px){
+          .ppoo{
+            gap: 20px;
+          }
+        }
+        @media(max-width:400px){
+          .ppoo{
+            gap: 10px;
+          }
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -222,10 +285,10 @@
                         <img class="user-image" src="./img/user.jpg" alt="">
                     </div>
                     <div>
-                      <p class="Helo">Hello, sadads</p>
+                      <p class="Helo">Hello, <span class="Login-user">Username<span></p>
                     </div>
-                    <div>
-                        <p class="p" id="Dashboard">Dashboard</p>
+                    <div class="vvxx">
+                        <p class="p active" id="Dashboard">Dashboard</p>
                         <p class="p" id="Orders" >Orders</p>
                         <p class="p" id="Downloads" >Downloads</p>
                         <p class="p" id="Adress" >Adress</p>

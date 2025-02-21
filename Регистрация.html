@@ -72,6 +72,24 @@
         opacity: 1;
      
     }
+    @media(max-width:530px){
+      .blr{
+        width:94.3396vw;
+      }
+      .lost{
+        width:94.3396vw;
+      }
+      .res-pas{
+        width:94.3396vw;
+      }
+      .res-pas.xs{
+        width:94.3396vw;
+      }
+      .lost-your{
+        width:94.3396vw;
+      }
+
+    }
     .sdsdd{
         margin-top: 20px;
     }
@@ -260,6 +278,10 @@
   <div class="enter-name enter-name-none"></div>
 <p class="lost-your">Register</p>
 <div class="divin">
+  <label for="login" class="blrr">Login</label>
+  <input class="blr" id="login" type="text" required>
+</div>
+<div class="divin">
   <label for="email" class="blrr">email</label>
   <input class="blr" id="email" type="email" required>
 </div>
@@ -287,18 +309,7 @@
   </div>
 </footer>
 <script>
-  const blr = document.querySelector(".blr")
-  const respas = document.querySelector(".res-pas")
-  const entername = document.querySelector(".enter-name")
-  respas.addEventListener("click" , ()=>{
-    if (blr.value ===''){
-      entername.textContent = 'Error: Username is required.'
-    }
-    else{
-      entername.textContent = 'Invalid username or email.'
-    }
-    entername.classList.remove("enter-name-none")
-  })
+
   
 </script>
 <script src="./js/register.js" ></script>
