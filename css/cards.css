@@ -1,31 +1,31 @@
-.cards .card{
-    width: 300px;
-    background-color: #0a0a0a !important;
-    margin-left: 50px;
-    color: white;
-    position: relative;
-  }
-  .hover-image{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 285px;
-    height: 430px;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-  }
-  .card:hover .hover-image{
-    opacity: 1;
-  }
-  .love_icon:hover{
-    fill: white !important;
-  }
-  .title{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none !important;
-  }
-  .card-link{
-    text-decoration: none !important;
-  }
+.cards .card {
+  width: 300px;
+  background-color: #0a0a0a !important;
+  margin-left: 50px;
+  color: white;
+  position: relative;
+}
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 285px;
+  height: 430px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover .hover-image {
+  opacity: 1;
+}
+.love_icon:hover {
+  fill: white !important;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none !important;
+}
+.card-link {
+  text-decoration: none !important;
+}

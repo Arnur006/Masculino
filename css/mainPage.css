@@ -1,121 +1,114 @@
-        .main{
-            display: flex;
-        }
-         .ffd{
-            position: unset !important;
-            background-color:#0a0a0a;
-            padding-top: 25px;
-            padding-right: 10px;
-           
-         }
-         .gg{
-            font-size: small !important;
-            
-            text-align: none !important;
-         }
-         .gg a{
-          text-decoration: none;
-         }
-         .gg span{
-          color: white !important;
-         }
-         
-         .cc{
-            color: white;
-            font-size: medium !important;
-         }
-         .v:hover span{
-          color: #dc9814 !important;
-         }
-        .span-active span{
-          color: #dc9814 !important;
-         }
-         .n{
-          padding-bottom: 25px;
-          border-bottom: 1px solid white ;
-         }
-         
-       
-        
-        
-        .cards{
-          display: flex;
-          flex-wrap: wrap;
-        }
-        .cards .card{
-          width: 300px;
-          background-color: #0a0a0a !important;
-          margin-left: 1.1vw;
-          color: white;
-          position: relative;
-        }
-        .hover-image{
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 285px;
-          height: 430px;
-          opacity: 0;
-          transition: all 0.5s ease-in-out;
-        }
-        .card:hover .hover-image{
-          opacity: 1;
-        }
-        .love_icon:hover{
-          fill: white !important;
-        }
-        .title{
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-        .lopp{  
-          font-size: medium;
-          width:200px;
-          border-color: white !important;
-          border-radius: 100px;
-          color: white !important;
-          display: none;
-          align-items: center;
-          justify-content: space-between;
+.main {
+  display: flex;
+}
+.ffd {
+  position: unset !important;
+  background-color: #0a0a0a;
+  padding-top: 25px;
+  padding-right: 10px;
+}
+.gg {
+  font-size: small !important;
 
-        }
-        .lopp:hover{
-          text-decoration: line-through;
-          background-color: inherit !important;
-        }  
-        .yty{
-          height: 100px;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          margin-left: 50px;
-        } 
-        .uiu{
-          background-image: url("img/close-svgrepo-com.svg") !important;
-        
-        }
-      
-        .closee{  
-          height: 30px !important;
-          width: 30px !important ;
-          display: none;
-        }
-        .size-active{
-          border: 1px solid #dc9814;
-          width: max-content;
-          display: flex;
-          align-items: center;
-          border-radius: 50px;
-          padding-right: 10px;
-        }
-        .size-active .closee{
-          display: block;
-        }
-        .size-active .gg__span{
-          color:#dc9814 !important;
-        }
-        .lopp-active{
-          display: flex;
-        }
-      
+  text-align: none !important;
+}
+.gg a {
+  text-decoration: none;
+}
+.gg span {
+  color: white !important;
+}
+
+.cc {
+  color: white;
+  font-size: medium !important;
+}
+.v:hover span {
+  color: #dc9814 !important;
+}
+.span-active span {
+  color: #dc9814 !important;
+}
+.n {
+  padding-bottom: 25px;
+  border-bottom: 1px solid white;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards .card {
+  width: 300px;
+  background-color: #0a0a0a !important;
+  margin-left: 1.1vw;
+  color: white;
+  position: relative;
+}
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 285px;
+  height: 430px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover .hover-image {
+  opacity: 1;
+}
+.love_icon:hover {
+  fill: white !important;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lopp {
+  font-size: medium;
+  width: 200px;
+  border-color: white !important;
+  border-radius: 100px;
+  color: white !important;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.lopp:hover {
+  text-decoration: line-through;
+  background-color: inherit !important;
+}
+.yty {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.uiu {
+  background-image: url("img/close-svgrepo-com.svg") !important;
+}
+
+.closee {
+  height: 30px !important;
+  width: 30px !important ;
+  display: none;
+}
+.size-active {
+  border: 1px solid #dc9814;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding-right: 10px;
+}
+.size-active .closee {
+  display: block;
+}
+.size-active .gg__span {
+  color: #dc9814 !important;
+}
+.lopp-active {
+  display: flex;
+}

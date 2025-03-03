@@ -1,97 +1,95 @@
-
-.iop{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+.iop {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
-.gla{
-    font-size: x-large;
-    font-weight: 500;
-    color:white;
+.gla {
+  font-size: x-large;
+  font-weight: 500;
+  color: white;
 }
-.black{
-    background-color: transparent;
-    border: 1px solid white;
-    height: 35px;
-    
+.black {
+  background-color: transparent;
+  border: 1px solid white;
+  height: 35px;
 }
-.iop-2{
-    margin-right: 50px;
-    display: flex;
-    gap: 50px;
-    width: 1000px;
+.iop-2 {
+  margin-right: 50px;
+  display: flex;
+  gap: 50px;
+  width: 1000px;
 }
-.iop-2-text{
+.iop-2-text {
   color: white;
   padding-top: 10px !important;
 }
-.male{
+.male {
   color: white;
   width: max-content;
 }
-.ogo{
-    color: white;
+.ogo {
+  color: white;
 }
 
-.ass{ 
-margin-top: 30px;
+.ass {
+  margin-top: 30px;
 }
 
-.form-groupe{
+.form-groupe {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 500px;
 }
-.glav-mnb{
+.glav-mnb {
   width: max-content;
   margin: 0 auto;
   display: flex;
 }
-.iop-3{
-    width: 1000px;
+.iop-3 {
+  width: 1000px;
 }
-.iop-4{
-    width: 1000px;
+.iop-4 {
+  width: 1000px;
 }
-.iop-5{
-    width: 1000px;
+.iop-5 {
+  width: 1000px;
 }
-.iop-6{
-    width: 1000px;
+.iop-6 {
+  width: 1000px;
 }
-.iop-7{
-    width: 1000px;
+.iop-7 {
+  width: 1000px;
 }
-.content{
-    margin: 0 auto;
+.content {
+  margin: 0 auto;
 }
-.SSAA{
-    margin-top: 20px;
+.SSAA {
+  margin-top: 20px;
 }
-.Save{
-    width: 140px;
-    height: 35px;
-   
-    border: none;
-    color: white;
-    background-color: #aa783d;
+.Save {
+  width: 140px;
+  height: 35px;
+
+  border: none;
+  color: white;
+  background-color: #aa783d;
 }
-.Save:hover{
-    background-color: #946836;
+.Save:hover {
+  background-color: #946836;
 }
-.zrat{
-    color: white;
+.zrat {
+  color: white;
 }
-.srat{
-    color: white;
-    font-size:x-large;
-    font-weight: 400;
+.srat {
+  color: white;
+  font-size: x-large;
+  font-weight: 400;
 }
-.pit{
-    color: white;
+.pit {
+  color: white;
 }
-.add{
-    text-decoration: none;
-    color:#aa783d;
+.add {
+  text-decoration: none;
+  color: #aa783d;
 }

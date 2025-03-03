@@ -1,153 +1,152 @@
-@media(max-width:3100px){
-  .custom-card{
-    width: 16.9900vw !important;
+@media (max-width: 3100px) {
+  .custom-card {
+    width: 16.99vw !important;
     height: max-content;
   }
-  .custom-card-image, .hover-image{
-    width: 16.9900vw !important;
+  .custom-card-image,
+  .hover-image {
+    width: 16.99vw !important;
     height: 25.4848vw !important;
   }
-
- }
- @media(max-width:3100px){
-  .custom-card{
-    width: 16.9900vw;
+}
+@media (max-width: 3100px) {
+  .custom-card {
+    width: 16.99vw;
     height: max-content;
   }
-  .custom-card-image, .hover-image{
+  .custom-card-image,
+  .hover-image {
     width: 16.6487vw !important;
     height: 24.9731vw;
   }
-  
 }
- @media(max-width:2560px){
-  .custom-card{
+@media (max-width: 2560px) {
+  .custom-card {
     width: 16.8164vw !important;
     height: max-content;
   }
-  .custom-card-image, .hover-image{
+  .custom-card-image,
+  .hover-image {
     width: 16.8164vw !important;
     height: 25.2246vw !important;
   }
-  
- }
- @media(max-width:1440px){
-  .custom-card{
+}
+@media (max-width: 1440px) {
+  .custom-card {
     width: 16.0417vw !important;
     height: max-content;
   }
-  .custom-card-image, .hover-image{
+  .custom-card-image,
+  .hover-image {
     width: 16.0417vw !important;
     height: 24.0625vw !important;
   }
-  
- }
+}
 
- @media(max-width:1024px){
-  .cards .card{
+@media (max-width: 1024px) {
+  .cards .card {
     margin-left: 1vw;
   }
-  .custom-card{
+  .custom-card {
     width: 15.7109vw !important;
     height: max-content;
   }
-  .custom-card-image, .hover-image{
+  .custom-card-image,
+  .hover-image {
     width: 15.7109vw !important;
     height: 23.5654vw !important;
   }
-  .card-title{
+  .card-title {
     font-size: 10px;
-   
   }
 }
-@media(max-width:992px){
-          .manat{
-            margin-left: -50px;
-          }
-          .custom-card{
-            width: 29.9677vw !important;
-            height: max-content;
-          }
-          .custom-card-image, .hover-image{
-            width: 29.9677vw !important;
-            height: 44.9516vw !important;
-          }
-        }
-        @media(max-width:768px){
-          .cards .card{
-            margin-left: 2vw !important;
-          }
-          .custom-card{
-            width: 30.2552vw !important;
-            height: max-content;
-          }
-          .custom-card-image, .hover-image{
-            width: 30.2552vw !important;
-            height: 45.4401vw !important;
-          }
-          .card-title{
-            font-size: 15px;
-           
-          }
-        }
-        @media(max-width:425px){
-          .cards .card{
-            margin-left: 2vw !important;
-          }
-          .custom-card{
-            width: 44.5882vw !important;
-            height: max-content;
-            margin-top: 25px;
-          }
-          .custom-card-image, .hover-image{
-            width: 44.5882vw !important;
-            height: 66.8824vw !important;
-          }
-          .card-title{
-            font-size: 10px;
-           
-          }
-        }
-  .search-modal{
-        padding: 10px;
-      }
-      .search-link{
-        text-decoration: none;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-      .searh-title{
-        color:white;
-        font-size: small;
-        
-      }
-      .search-result{
-        margin-left:50px ;
-        margin-top:25px ;
-      }
-      .search-list{
-        padding: 0;
-        margin-top: 15px;
-        display: flex;
-        gap:15px;
-        flex-wrap: wrap;
-        max-width: 95%;
-        margin: 0 auto;
-        list-style-type: none;
-      }
-      .search-card-title{
-        margin-top: 0;
-      }
-      .search-card-price{
-        margin-top: 0;
-      }
-      .custom-card{
-        width: max-content !important;
-      
-       }
-       .gc{
-        background-image: url("../img/close-svgrepo.svg");
-        padding: 10px;
-      }
+@media (max-width: 992px) {
+  .manat {
+    margin-left: -50px;
+  }
+  .custom-card {
+    width: 29.9677vw !important;
+    height: max-content;
+  }
+  .custom-card-image,
+  .hover-image {
+    width: 29.9677vw !important;
+    height: 44.9516vw !important;
+  }
+}
+@media (max-width: 768px) {
+  .cards .card {
+    margin-left: 2vw !important;
+  }
+  .custom-card {
+    width: 30.2552vw !important;
+    height: max-content;
+  }
+  .custom-card-image,
+  .hover-image {
+    width: 30.2552vw !important;
+    height: 45.4401vw !important;
+  }
+  .card-title {
+    font-size: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .cards .card {
+    margin-left: 2vw !important;
+  }
+  .custom-card {
+    width: 44.5882vw !important;
+    height: max-content;
+    margin-top: 25px;
+  }
+  .custom-card-image,
+  .hover-image {
+    width: 44.5882vw !important;
+    height: 66.8824vw !important;
+  }
+  .card-title {
+    font-size: 10px;
+  }
+}
+.search-modal {
+  padding: 10px;
+}
+.search-link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.searh-title {
+  color: white;
+  font-size: small;
+}
+.search-result {
+  margin-left: 50px;
+  margin-top: 25px;
+}
+.search-list {
+  padding: 0;
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 95%;
+  margin: 0 auto;
+  list-style-type: none;
+}
+.search-card-title {
+  margin-top: 0;
+}
+.search-card-price {
+  margin-top: 0;
+}
+.custom-card {
+  width: max-content !important;
+}
+.gc {
+  background-image: url("../img/close-svgrepo.svg");
+  padding: 10px;
+}
