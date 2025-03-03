@@ -149,4 +149,21 @@
 .gc {
   background-image: url("../img/close-svgrepo.svg");
   padding: 10px;
+  box-shadow: none;
 }
+  .ooop{
+    border:none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    box-shadow: none !important;
+    border-color: currentColor !important;
+  }
+  .ooop::placeholder{
+    color: #999;
+    box-shadow: none !important;
+  }
+.accordion-button:focus{
+    box-shadow: none !important;
+    border-color: currentColor !important;
+  }
+
