@@ -884,7 +884,8 @@ g {
   margin: 0 auto;
 }
 .kor-elem-naz table {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   margin-top: 15px;
 }
 .zak-td {

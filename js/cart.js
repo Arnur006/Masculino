@@ -1,139 +1,131 @@
-
-
-const cart = ()=>{
-  console.log(localStorage)
+const cart = () => {
+  console.log(localStorage);
   const korElemNaz = document.querySelector(".kor-elem-naz");
-  const zena = document.querySelector(".zena")
-  const kor_chet = document.querySelector(".kor-chet") 
-  let quant = 0
+  const zena = document.querySelector(".zena");
+  const kor_chet = document.querySelector(".kor-chet");
+  let quant = 0;
 
-  const cartContent = () =>{
-    if(Object.keys(localStorage).length>0){
-      const empty = document.querySelector(".empty")
-      const korzinacheckwrap = document.querySelector(".korzina-check_wrap")
+  const cartContent = () => {
+    if (Object.keys(localStorage).length > 0) {
+      const empty = document.querySelector(".empty");
+      const korzinacheckwrap = document.querySelector(".korzina-check_wrap");
       let qq = 0;
       let globalprice = 0;
       const chetchick = () => {
-        qq = 0
-        globalprice = 0 
-        const tabls = korElemNaz.querySelectorAll("table")
-        tabls.forEach(table=>{
-          let localPrice = table.querySelector(".cdpc")
-          let localSpyn = table.querySelector(".spyn")
-          globalprice += Number(localPrice.textContent)
-          qq+= Number(localSpyn.textContent)
-        })
-        kor_chet.textContent = qq
-        zena.textContent = globalprice
-
-      }
-      const emptyCart = ()=>{
-        let i =Number(kor_chet.textContent)
-        if(i<1){
-          empty.classList.remove('none')
-          korElemNaz.classList.add("none")
-          korzinacheckwrap.classList.add("none")
-         
-
+        qq = 0;
+        globalprice = 0;
+        const tabls = korElemNaz.querySelectorAll("table");
+        tabls.forEach((table) => {
+          let localPrice = table.querySelector(".cdpc");
+          let localSpyn = table.querySelector(".spyn");
+          globalprice += Number(localPrice.textContent);
+          qq += Number(localSpyn.textContent);
+        });
+        kor_chet.textContent = qq;
+        zena.textContent = `${globalprice}$`;
+      };
+      const emptyCart = () => {
+        let i = Number(kor_chet.textContent);
+        if (i < 1) {
+          empty.classList.remove("none");
+          korElemNaz.classList.add("none");
+          korzinacheckwrap.classList.add("none");
+        } else {
+          empty.classList.add("none");
+          korElemNaz.classList.remove("none");
+          korzinacheckwrap.classList.remove("none");
         }
-        else{
-          empty.classList.add('none')
-          korElemNaz.classList.remove("none")
-          korzinacheckwrap.classList.remove("none")
-        }
-      }
-      const deleteCart = () =>{
-        const tables = korElemNaz.querySelectorAll("table")
-        tables.forEach(table=>{
-          const closvg = table.querySelector(".clo-svg")
-          closvg.addEventListener('click' , ()=>{
-            const key = closvg.classList[1]
-            localStorage.removeItem(key)
-            korElemNaz.removeChild(table)
-            chetchick()
-            emptyCart()
-          })
-     
-        })
-
-      }
-      const trQuant = (table)=>{
-        const quant = table.querySelector('.quant_cart')
-        let key = ''
-        let item = ''
-        let newValue = {}
-        console.log(item)
-        const minus = table.querySelector('.minus')
-        const plus = table.querySelector('.plus')
-        const spyn = table.querySelector('.spyn')
-        const standartPrice = Number(priceOf.textContent)
-        const prise = table.querySelector('.cdpc')
-        plus.addEventListener('click' , ()=>{
-          q = Number(spyn.textContent)
-          q+=1
-          spyn.textContent=q
-          prise.textContent = `${standartPrice * q}`
-          chetchick()
-          key = quant.classList[1]
-          item = JSON.parse(localStorage.getItem(key))
+      };
+      const deleteCart = () => {
+        const tables = korElemNaz.querySelectorAll("table");
+        tables.forEach((table) => {
+          const closvg = table.querySelector(".clo-svg");
+          closvg.addEventListener("click", () => {
+            const key = closvg.classList[1];
+            localStorage.removeItem(key);
+            korElemNaz.removeChild(table);
+            chetchick();
+            emptyCart();
+          });
+        });
+      };
+      const trQuant = (table) => {
+        const quant = table.querySelector(".quant_cart");
+        let key = "";
+        let item = "";
+        let newValue = {};
+        console.log(item);
+        const minus = table.querySelector(".minus");
+        const plus = table.querySelector(".plus");
+        const spyn = table.querySelector(".spyn");
+        const standartPrice = Number(priceOf.textContent);
+        const prise = table.querySelector(".cdpc");
+        plus.addEventListener("click", () => {
+          q = Number(spyn.textContent);
+          q += 1;
+          spyn.textContent = q;
+          prise.textContent = `${standartPrice * q}`;
+          chetchick();
+          key = quant.classList[1];
+          item = JSON.parse(localStorage.getItem(key));
           newValue = {
-            baseCoast:priceOf.textContent,
+            baseCoast: priceOf.textContent,
             coast: `${standartPrice * q}`,
             colorr: item.colorr,
             imgSrc: item.imgSrc,
             lklklk: q,
             name: item.name,
             sizee: item.sizee,
-          }
+          };
           localStorage.setItem(key, JSON.stringify(newValue));
-        })
-        minus.addEventListener('click' , ()=>{
-          q = Number(spyn.textContent)
-          if(q<=1){
-            q=1
-            prise.textContent = `${standartPrice * q}`
-            key = quant.classList[1]
-          item = JSON.parse(localStorage.getItem(key))
-          newValue = {
-            baseCoast:priceOf.textContent,
-            coast: `${standartPrice * q}`,
-            colorr: item.colorr,
-            imgSrc: item.imgSrc,
-            lklklk: q,
-            name: item.name,
-            sizee: item.sizee,
+        });
+        minus.addEventListener("click", () => {
+          q = Number(spyn.textContent);
+          if (q <= 1) {
+            q = 1;
+            prise.textContent = `${standartPrice * q}`;
+            key = quant.classList[1];
+            item = JSON.parse(localStorage.getItem(key));
+            newValue = {
+              baseCoast: priceOf.textContent,
+              coast: `${standartPrice * q}`,
+              colorr: item.colorr,
+              imgSrc: item.imgSrc,
+              lklklk: q,
+              name: item.name,
+              sizee: item.sizee,
+            };
+            localStorage.setItem(key, JSON.stringify(newValue));
+          } else {
+            q -= 1;
+            prise.textContent = `${standartPrice * q}`;
+            key = quant.classList[1];
+            item = JSON.parse(localStorage.getItem(key));
+            newValue = {
+              baseCoast: priceOf.textContent,
+              coast: `${standartPrice * q}`,
+              colorr: item.colorr,
+              imgSrc: item.imgSrc,
+              lklklk: q,
+              name: item.name,
+              sizee: item.sizee,
+            };
+            localStorage.setItem(key, JSON.stringify(newValue));
           }
-          localStorage.setItem(key, JSON.stringify(newValue));
-          }
-          else{
-            q-=1
-            prise.textContent = `${standartPrice * q}`
-            key = quant.classList[1]
-          item = JSON.parse(localStorage.getItem(key))
-          newValue = {
-            baseCoast:priceOf.textContent,
-            coast: `${standartPrice * q}`,
-            colorr: item.colorr,
-            imgSrc: item.imgSrc,
-            lklklk: q,
-            name: item.name,
-            sizee: item.sizee,
-          }
-          localStorage.setItem(key, JSON.stringify(newValue));
-          }
-          spyn.textContent=q
-          chetchick()
-          
-        })
-      }
+          spyn.textContent = q;
+          chetchick();
+        });
+      };
       Object.keys(localStorage).forEach((key) => {
         const value = JSON.parse(localStorage.getItem(key));
         console.log(value);
-        const table = document.createElement('table')
-        table.classList.add('.kor-table')
+        const table = document.createElement("table");
+        table.classList.add(".kor-table");
         table.innerHTML = ` <tbody id='${key}'>
                                  <tr>
-                                   <td rowspan="4"><img  class="korzina-foto" src="${value.imgSrc}" alt=""></td>
+                                   <td rowspan="4"><img  class="korzina-foto" src="${
+                                     value.imgSrc
+                                   }" alt=""></td>
                                    <td class="white left">${value.name}</td>
                                    <td></td>
                                    <td class="zak-td"><svg class="clo-svg ${key}" width="16px" height="16px" viewBox="0 0 24 24" fill="#a5a5a5" xmlns="http://www.w3.org/2000/svg" stroke="#a5a5a5">
@@ -148,11 +140,15 @@ const cart = ()=>{
                                    </td>
                                  </tr>
                                  <tr>
-                                   <td class="white left" colspan="2">${value.colorr}</td>
+                                   <td class="white left" colspan="2">${
+                                     value.colorr
+                                   }</td>
                                  </tr>
                                  <tr>
                                    
-                                   <td class="gray left small-text">Размер ${value.sizee}</td>
+                                   <td class="gray left small-text">Размер ${
+                                     value.sizee
+                                   }</td>
     
                                  </tr>
                                  <tr class="quant_cart">
@@ -192,24 +188,26 @@ const cart = ()=>{
                                       
                                      </td>
                                    <td></td>
-                                   <td class="white zak-td"><span class="cdpc">${Number(value.lklklk) * Number(value.baseCoast)}</span>$</td>
+                                   <td class="white zak-td"><span class="cdpc">${
+                                     Number(value.lklklk) *
+                                     Number(value.baseCoast)
+                                   }</span>$</td>
                                  </tr>
                                </tbody>`;
-                               globalprice += Number(value.lklklk) * Number(value.baseCoast)
-                               korElemNaz.append(table)
-                               korElemNaz.classList.remove("none")
-                               empty.classList.add('none')
-                               korzinacheckwrap.classList.remove("none")
-                               quant+= Number(value.lklklk)
-                               zena.textContent = globalprice
-                               deleteCart()
-                              //  trQuant(table)
+        globalprice += Number(value.lklklk) * Number(value.baseCoast);
+        korElemNaz.append(table);
+        korElemNaz.classList.remove("none");
+        empty.classList.add("none");
+        korzinacheckwrap.classList.remove("none");
+        quant += Number(value.lklklk);
+        zena.textContent = `${globalprice}$`;
+        deleteCart();
+        //  trQuant(table)
       });
     }
-    kor_chet.textContent = quant
-  }
-  cartContent()
-
-}
-export default cart
-document.addEventListener("DOMContentLoaded",cart); 
+    kor_chet.textContent = quant;
+  };
+  cartContent();
+};
+export default cart;
+document.addEventListener("DOMContentLoaded", cart);
